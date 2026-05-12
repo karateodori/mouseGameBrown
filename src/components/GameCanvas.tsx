@@ -172,7 +172,7 @@ export const GameCanvas: React.FC<GameCanvasProps> = ({ onScore, onGameOver, isP
           } else if (m.type === 'slow') {
             slowEndTimeRef.current = Date.now() + 5000;
           } else if (m.type === 'life') {
-            onLifeChange(lives + 1);
+            onLifeChange(livesRef.current + 1);
           }
 
           if (m.type !== 'good') {
